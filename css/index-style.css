@@ -1,0 +1,606 @@
+/* ====================>>>>> Start General Rule <<<<======================= */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --padding-section-top: 5rem;
+    --padding-section-bottom: 5rem;
+    --main-transition: .5s;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+::placeholder {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+section {
+    padding-top: var(--padding-section-top);
+    padding-bottom: var(--padding-section-bottom);
+}
+
+.navbar-toggler:focus {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.main-title {
+    margin: 0 auto 70px;
+    font-size: 45px;
+    color: #333;
+    font-weight: 900;
+    position: relative;
+    z-index: 3;
+    width: fit-content;
+}
+
+.main-title::after {
+    content: '';
+    width: 100%;
+    height: 30px;
+    background-image: url(../imgs/dots.png);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* =========== Start To-Top button Component=========  */
+
+.to-top {
+    bottom: 10px;
+    background-color: #21252981;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #cde1f8;
+    transition: var(--main-transition);
+    z-index: 50;
+}
+
+.to-top:hover {
+    background-color: #212529;
+    border-color: #fff;
+}
+
+/* ============================================>>>>> Start Navbar <<<<================================================= */
+header {
+    z-index: 10000;
+    /* background-color: rgba(51, 51, 51, 0.7); */
+}
+
+.navbar ul li a.nav-link {
+    padding: 0 !important;
+    font-size: 14px;
+}
+
+.navbar ul li a.active:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: calc(100% - 0px);
+    height: 2px;
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        background-color: #fff;
+    }
+
+    .navbar ul li a {
+        color: black !important;
+        margin-top: 15px;
+    }
+
+    .navbar ul li a.active:after {
+        height: 0px;
+    }
+}
+
+/* ============================================>>>>> Start Home Section <<<<================================================= */
+
+.home {
+    background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url(../imgs/bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    height: 100vh;
+}
+
+.home-info h2 {
+    font-size: 55px;
+}
+
+.home-info p {
+    font-size: 45px;
+}
+
+.home-info p:after {
+    font-weight: 400;
+    content: ' |';
+    animation: typingEffect 5s .3s both infinite linear;
+}
+
+@keyframes typingEffect {
+    0% {
+        content: ''
+    }
+
+    3% {
+        content: 'D|'
+    }
+
+    6% {
+        content: 'De|'
+    }
+
+    9% {
+        content: ' Des|'
+    }
+
+    12% {
+        content: ' Desi|'
+    }
+
+    12% {
+        content: ' Desig|'
+    }
+
+    14% {
+        content: ' Design|'
+    }
+
+    16% {
+        content: ' Designe|'
+    }
+
+    18% {
+        content: ' Designer.|'
+    }
+
+    27% {
+        content: ' Designe|'
+    }
+
+    29% {
+        content: ' Design|'
+    }
+
+    31% {
+        content: ' Desig|'
+    }
+
+    33% {
+        content: ' Desi|'
+    }
+
+    36% {
+        content: ' Des|'
+    }
+
+    39% {
+        content: ' De|'
+    }
+
+    42% {
+        content: 'D|'
+    }
+
+    45% {
+        content: ''
+    }
+
+    48% {
+        content: ' D|'
+    }
+
+    51% {
+        content: ' De|'
+    }
+
+    54% {
+        content: ' Dev|'
+    }
+
+    57% {
+        content: ' Deve|'
+    }
+
+    60% {
+        content: ' Devel|'
+    }
+
+    63% {
+        content: ' Develo|'
+    }
+
+    66% {
+        content: ' Develope|'
+    }
+
+    68% {
+        content: ' Developer.|'
+    }
+
+    79% {
+        content: ' Develope|'
+    }
+
+    81% {
+        content: ' Develop|'
+    }
+
+    83% {
+        content: ' Develo|'
+    }
+
+    86% {
+        content: ' Devel|'
+    }
+
+    89% {
+        content: ' Deve|'
+    }
+
+    92% {
+        content: ' Dev|'
+    }
+
+    95% {
+        content: ' De|'
+    }
+
+    98% {
+        content: ' D|'
+    }
+
+    100% {
+        content: ' '
+    }
+}
+
+.home-social a {
+    width: 35px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, .4);
+    line-height: 35px;
+}
+
+.home-social svg {
+    font-size: 15px;
+}
+
+/* ============================================>>>>> Start About Section <<<<================================================= */
+.about .about-photo:after {
+    content: "";
+    position: absolute;
+    left: -30px;
+    bottom: -30px;
+    width: 80%;
+    height: 80%;
+    background-image: url(../imgs/dots.png);
+    z-index: -1;
+}
+
+.about-info p {
+    line-height: 1.5;
+}
+
+.about .about-progress .progress {
+    height: 25px;
+    box-shadow: 0px 2px 7px rgb(0 0 0 / 15%) inset;
+}
+
+.about .about-cv button {
+    border: 1px solid #212529;
+    transition: var(--main-transition);
+}
+
+.about .about-cv button.active,
+.about .about-cv button:hover {
+    background-color: #212529;
+}
+
+.about .about-cv button.active:hover {
+    background-color: #fff;
+}
+
+.about .about-cv button.active:hover a {
+    color: black !important;
+}
+
+
+.about .about-cv button a {
+    transition: var(--main-transition);
+    font-size: 14px;
+}
+
+.about .about-cv button:hover a {
+    color: #fff !important;
+}
+
+
+/* ============================================>>>>> Start Service Section <<<<================================================= */
+.service {
+    background: #f7f7f7;
+}
+
+.service .service-box {
+    padding: 50px 20px;
+    background-color: #fff;
+    box-shadow: 0px 10px 30px -8px rgb(0 0 0 / 10%)
+}
+
+.service .service-box .icon {
+    width: 65px;
+    height: 65px;
+    background-color: #f7f7f7;
+    transition: var(--main-transition);
+}
+
+.service .service-box .icon svg {
+    font-size: 28px;
+}
+
+.service .service-box:hover .icon {
+    background-color: #212529;
+    color: #fff;
+}
+
+/* ============================================>>>>> Start portfolio Section <<<<================================================= */
+
+.portfolio .nav-pills .nav-link.active,
+.portfolio .nav-pills .nav-link {
+    position: relative;
+    background-color: transparent !important;
+    color: #222;
+    font-weight: bold;
+}
+
+.portfolio .nav-pills .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    bottom: 5px;
+    height: 2px;
+    background-color: #212529;
+    animation: hover .4s forwards ease-in-out;
+}
+
+@keyframes hover {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    100% {
+        width: calc(100% - 32px);
+    }
+
+}
+
+.portfolio .work-img-box .overlay {
+    width: 95%;
+    height: 95%;
+    top: 2.5%;
+    left: 2.5%;
+    transition: .6s;
+}
+
+.portfolio .overlay .icon span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.portfolio .work-img-box:hover .overlay {
+    opacity: 1 !important;
+}
+
+.portfolio .work-img-box .overlay h6 {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.portfolio .work-img-box:hover .overlay h6 {
+    animation: fade-down .5s ease-in-out forwards;
+}
+
+.portfolio .work-img-box:hover .overlay .icon {
+    animation: fade-up .5s ease-in-out both;
+}
+
+@keyframes fade-down {
+    from {
+        transform: translateY(-8px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fade-up {
+    from {
+        transform: translateY(8px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+/* ============================================>>>>> Start Testimonials Section <<<<================================================= */
+.testimonials {
+    background: #f7f7f7;
+}
+
+.testimonials .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #212529;
+    margin-left: 10px;
+}
+
+.testimonials .carousel-indicators button.active {
+    background-color: #212529 !important;
+}
+
+.testimonials .carousel-inner {
+    width: 90% !important;
+}
+
+.testimonials .carousel-inner .carousel-caption p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ============================================>>>>> Start Status Section <<<<================================================= */
+.status .box h5 {
+    color: #343434 !important;
+    font-size: 30px;
+    font-weight: 900 !important;
+}
+
+.status .box p {
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #748182;
+    font-size: 15px;
+}
+
+/* ============================================>>>>> Start blog Section <<<<================================================= */
+
+.blog {
+    background-color: #f7f7f7;
+}
+
+.blog .owl-item a.title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #888 !important;
+    overflow: hidden;
+}
+
+.blog .owl-item a.title+h6 {
+    color: #343434 !important;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.blog .owl-item .read-more {
+    font-size: 14px;
+    color: #343434;
+}
+
+.blog .owl-item .read-more::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+}
+
+.blog .owl-item img {
+    transition: var(--main-transition);
+}
+
+.blog .owl-item:hover img {
+    transform: scale(1.15);
+}
+
+/* ============================================>>>>> Start Contact Us  Section <<<<================================================= */
+
+.contact .contact-icon {
+    width: 60px;
+    height: 60px;
+    background: #f4f4f4;
+    transition: var(--main-transition);
+}
+
+.contact .contact-box:hover .contact-icon {
+    background-color: #212529;
+    color: #fff;
+}
+
+.contact form input {
+    height: 40px;
+}
+
+.contact form input,
+.contact form textarea {
+    background-color: #f4f4f4;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+.contact button {
+    transition: var(--main-transition);
+}
+
+.contact button:hover {
+    background-color: #fff !important;
+}
+
+.contact button:hover {
+    color: black !important;
+}
+
+/* ============================================>>>>> Start Footer Section <<<<================================================= */
+
+footer p {
+    font-size: 14px;
+    word-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    color: #748182;
+    font-family: po;
+}
+
+
+
+/* ============>>>> Media Queries <<<<=========== */
+@media (max-width:600px) {}
+
+@media (min-width:601px) and (max-width: 767px) {}
+
+@media (min-width: 768px) and (max-width:991px) {}
+
+/* from 992 to next min */
+@media (min-width: 992px) {}
+
+/* from 1200 to ...... */
+@media (min-width: 1200px) {}
