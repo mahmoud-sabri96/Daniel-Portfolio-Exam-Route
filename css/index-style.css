@@ -49,7 +49,7 @@ section {
 
 .main-title {
     margin: 0 auto 70px;
-    font-size: 45px;
+    font-size: 37px;
     color: #333;
     font-weight: 900;
     position: relative;
@@ -72,7 +72,7 @@ section {
 /* =========== Start To-Top button Component=========  */
 
 .to-top {
-    bottom: 10px;
+    bottom: 1%;
     background-color: #21252981;
     right: 10px;
     width: 40px;
@@ -89,8 +89,14 @@ section {
 
 /* ============================================>>>>> Start Navbar <<<<================================================= */
 header {
+    position: sticky;
+    top: 0;
+    width: 100%;
     z-index: 10000;
-    /* background-color: rgba(51, 51, 51, 0.7); */
+}
+
+header nav {
+    background-color: rgba(51, 51, 52, 0.85) !important;
 }
 
 .navbar ul li a.nav-link {
@@ -98,15 +104,32 @@ header {
     font-size: 14px;
 }
 
-.navbar ul li a.active:after {
+.navbar ul li a.active::after,
+.navbar ul li a.nav-link::after {
     content: "";
     position: absolute;
     top: 100%;
     left: 0;
-    width: calc(100% - 0px);
     height: 2px;
     background-color: #fff;
+    transition: var(--main-transition);
 }
+
+.navbar ul li a.nav-link::after {
+    width: 0%;
+}
+
+.navbar ul li:hover a.nav-link::after {
+    width: 100%
+}
+
+.navbar ul li a.active::after {
+    width: 100%
+}
+
+
+
+
 
 @media (max-width: 768px) {
     .navbar ul {
@@ -147,6 +170,7 @@ header {
     animation: typingEffect 5s .3s both infinite linear;
 }
 
+/* this animation Not the best but it was required as challange */
 @keyframes typingEffect {
     0% {
         content: ''

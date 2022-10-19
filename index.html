@@ -28,21 +28,21 @@
 <body>
     <!-- =========== Start To-Top button Component========= -->
     <a href="#home"
-        class="to-top position-fixed p-3 d-flex justify-content-center align-items-center rounded-circle text-white">
+        class="BTN to-top position-fixed p-3 d-flex justify-content-center align-items-center rounded-circle text-white">
         <i class="fa-solid fa-angle-up"></i>
     </a>
     <!-- ============================================== Start Navbar  ============================================ -->
     <header>
         <nav class="navbar navbar-expand-md position-absolute w-100 ">
             <div class="container">
-                <a class="navbar-brand h6 fw-semibold text-white" href="index.html">DANIELS</a>
+                <a class="navbar-brand h6 fw-semibold m-0 text-white" href="index.html">DANIELS</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars text-white"></i>
                 </button>
                 <div class="collapse navbar-collapse flex-grow-0 " id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-sm-center py-sm-3 ">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center  ">
                         <li class="nav-item ps-4 mb-sm-2 mb-lg-0"><a
                                 class="nav-link active position-relative text-white " aria-current="page"
                                 href="#home">Home</a>
@@ -746,10 +746,21 @@
                 }
             });
         });
+
+        // Start To Top-Btn
+        window.onscroll = () => {
+            if (window.scrollY >= 650) {
+                document.querySelector(".BTN").classList.replace("d-none", "d-flex")
+            } if (window.scrollY <= 650) {
+                document.querySelector(".BTN").classList.replace("d-flex", "d-none")
+            }
+        }
+
     </script>
     <!-- FontAwesome -->
     <script src="fontawesome/all.min.js"></script>
     <!-- BootStrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
